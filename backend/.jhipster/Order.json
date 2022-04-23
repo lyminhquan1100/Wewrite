@@ -1,0 +1,42 @@
+{
+  "applications": "*",
+  "changelogDate": "20220406092515",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "jhi_order",
+  "fields": [
+    {
+      "fieldName": "state",
+      "fieldType": "State",
+      "fieldValues": "ERROR,PROCESSING,CREATED,CART"
+    },
+    {
+      "fieldName": "totalPrice",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Order",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "orderDetails",
+      "otherEntityRelationshipName": "order",
+      "relationshipName": "details",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "order",
+      "relationshipName": "user",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

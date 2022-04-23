@@ -1,0 +1,36 @@
+{
+  "applications": "*",
+  "changelogDate": "20220406092512",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "user_payment",
+  "fields": [
+    {
+      "fieldName": "paymentType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "provider",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "balance",
+      "fieldType": "Float"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "UserPayment",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "userPayment",
+      "ownerSide": true,
+      "relationshipName": "user",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "no"
+}

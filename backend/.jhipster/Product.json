@@ -1,0 +1,54 @@
+{
+  "applications": "*",
+  "changelogDate": "20220406092513",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "product",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "content",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Float"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Product",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "image",
+      "otherEntityRelationshipName": "products",
+      "relationshipName": "image",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "orderDetails",
+      "otherEntityRelationshipName": "product",
+      "relationshipName": "orderDetail",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "productCategory",
+      "otherEntityRelationshipName": "products",
+      "relationshipName": "category",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "tag",
+      "otherEntityRelationshipName": "producs",
+      "ownerSide": false,
+      "relationshipName": "tags",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "no"
+}

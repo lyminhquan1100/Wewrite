@@ -1,0 +1,53 @@
+{
+  "applications": "*",
+  "changelogDate": "20220406092516",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "order_details",
+  "fields": [
+    {
+      "fieldName": "amount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "discountValue",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "discountCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "total",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "OrderDetails",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "order",
+      "otherEntityRelationshipName": "details",
+      "relationshipName": "order",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "product",
+      "otherEntityRelationshipName": "orderDetail",
+      "relationshipName": "product",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

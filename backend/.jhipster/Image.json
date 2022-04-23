@@ -1,0 +1,38 @@
+{
+  "applications": "*",
+  "changelogDate": "20220406092514",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "image",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "pathImage",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Image",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "image",
+      "ownerSide": true,
+      "relationshipName": "user",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "product",
+      "otherEntityRelationshipName": "image",
+      "relationshipName": "products",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

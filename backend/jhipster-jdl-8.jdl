@@ -1,0 +1,67 @@
+entity UserPayment{
+    paymentType String
+    provider String
+    balance Float
+}
+
+entity Product{
+    name String
+    content String
+    price Float
+}
+
+entity Image{
+	name String
+    pathImage String
+}
+
+enum State{
+	ERROR , PROCESSING, CREATED, CART
+}
+entity Order{
+	state State 
+	totalPrice Float
+    createdAt LocalDate
+}
+
+entity OrderDetails{
+	amount Integer
+    price Float
+    discountValue Integer 
+    discountCode String
+    total Float
+    createdAt LocalDate
+}
+
+entity ProductCategory{
+    name String
+    createdAt LocalDate
+}
+
+entity Tag {
+	name String
+}
+
+relationship OneToMany {
+	ProductCategory{products} to Product{category}
+}
+relationship ManyToOne {
+	Order{user} to User
+}
+relationship OneToMany {
+	Product{image} to Image{products}
+}
+relationship OneToMany {
+	Order{details} to OrderDetails{order}
+}
+relationship OneToMany {
+	Product{orderDetail} to OrderDetails{product}
+}
+relationship OneToOne {
+	UserPayment{user} to User
+    Image{user} to User
+}
+
+relationship ManyToMany {
+	Tag{producs} to Product{tags}
+}
